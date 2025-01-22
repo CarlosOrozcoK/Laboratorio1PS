@@ -1,3 +1,5 @@
+/* style.css */
+
 .custom-background {
     background: linear-gradient(135deg, #1e2736, #283144);
     height: 100vh;
@@ -79,9 +81,24 @@
 .btn-primary {
     background: linear-gradient(90deg, #007bff, #0056b3);
     border: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     background: linear-gradient(90deg, #0056b3, #003d80);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
