@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link href="/assets/styleNC.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="/contactos.html">Añadir Contacto</a>
+            <ul>
+                <li><a href="/contactos.html">Contactos</a></li>
+                <li><a href="/favoritos.html">Favoritos</a></li>
+                <li><a href="/perfilUsuario.html">Perfil</a></li>
+                <li><a href="/toDoList.html">Tareas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div>
+            <h4>Formulario</h4>
+            <form onsubmit="event.preventDefault(); window.location.href='/contactos.html';">
+                <div>
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="Juan Pérez">
+                    </div>
+                    <div>
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" placeholder="+1 234 567 890">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" placeholder="name@example.com">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
