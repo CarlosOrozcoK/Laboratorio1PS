@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="/assets/styleTDL.css" rel="stylesheet">
+    <link href="a://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="navbar-brand">TAREAS PENDIENTES</span>
+        <ul>
+            <li><a href="/contactos.html"><i class="fas fa-user"></i> Contactos</a></li>
+            <li><a href="/favoritos.html"><i class="fas fa-heart"></i> Favoritos</a></li>
+            <li><a href="/perfilUsuario.html"><i class="fas fa-user-circle"></i> Perfil</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="form-floating">
+                <label for="taskDescription">Tarea a Realizar</label>
+                <input type="text" id="taskDescription" placeholder="Descripción de tarea">
+            </div>
+            <div class="form-floating">
+                <label for="taskPriority">Seleccione la prioridad</label>
+                <select id="taskPriority">
+                    <option value="1" selected>Alto</option>
+                    <option value="2">Bajo</option>
+                </select>
+            </div>
+            <button id="addTaskBtn" class="btn">Agregar</button>
+        </div>
+
+        <div id="taskList" class="task-list">
+        </div>
+    </div>
+
+    <script src="/assets/toDoList.js"></script>
+</body>
+
+</html>
