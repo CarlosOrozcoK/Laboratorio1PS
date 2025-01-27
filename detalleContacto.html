@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Contacto</title>
+    <link href="/assets/styleDC.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Detalles del Contacto</h2>
+        <div class="contact-details">
+            <div class="avatar-container">
+                <img id="contactAvatar" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Avatar">
+            </div>
+            <div class="details-container">
+                <h3 id="contactName">Nombre del Contacto</h3>
+                <p><strong>Teléfono:</strong> <span id="contactPhone">No disponible</span></p>
+                <p><strong>Email:</strong> <span id="contactEmail">No disponible</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/contactos.html">Contactos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/favoritos.html">Favoritos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/perfilUsuario.html">Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/toDoList.html">Tareas</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const phone = urlParams.get('phone');
+            const email = urlParams.get('email');
+
+            if (name && phone && email) {
+                document.getElementById('contactName').innerText = name;
+                document.getElementById('contactPhone').innerText = phone;
+                document.getElementById('contactEmail').innerText = email;
+            }
+        });
+    </script>
+</body>
+
+</html>
