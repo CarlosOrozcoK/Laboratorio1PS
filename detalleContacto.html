@@ -39,6 +39,21 @@
             </li>
         </ul>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const phone = urlParams.get('phone');
+            const email = urlParams.get('email');
+
+            if (name && phone && email) {
+                document.getElementById('contactName').innerText = name;
+                document.getElementById('contactPhone').innerText = phone;
+                document.getElementById('contactEmail').innerText = email;
+            }
+        });
+    </script>
 </body>
 
 </html>
