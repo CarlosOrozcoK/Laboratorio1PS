@@ -53,6 +53,7 @@ function renderTasks() {
                 </p>
             </div>
             <button class="delete-btn" data-id="${task.id}">Eliminar</button>
+            <button class="edit-btn" data-id="${task.id}">Editar</button>
         `;
 
         taskList.appendChild(taskDiv);
@@ -63,9 +64,9 @@ function renderTasks() {
         button.addEventListener('click', () => deleteTask(parseInt(button.dataset.id)));
     });
 
-    // Añadir evento de editar a cada tarea
-    document.querySelectorAll('.task-item .task-content').forEach(content => {
-        content.addEventListener('click', () => populateForm(parseInt(content.parentElement.querySelector('.delete-btn').dataset.id)));
+    // Añadir evento de editar a cada botón de editar
+    document.querySelectorAll('.edit-btn').forEach(button => {
+        button.addEventListener('click', () => editTask(parseInt(button.dataset.id)));
     });
 }
 
@@ -75,7 +76,7 @@ function deleteTask(id) {
     renderTasks();
 }
 
-function populateForm(id) {
+function editTask(id) {
     const task = tasks.find(t => t.id === id);
     document.getElementById('taskDescription').value = task.description;
     document.getElementById('taskPriority').value = task.priority;
